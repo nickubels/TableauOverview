@@ -5,6 +5,7 @@
 \usepackage{qtree}
 \begin{document}
 \section{Tableaux for classical propositional logic}
+Initial list for $A_1, ... A_n \models B$ is with $\neg B$. Closure condition: $A$ and $\neg A$ for some formula $A$ occur on a branch. \\
 \Tree [.{$A \supset B$} [.{$\neg A$} ] [.{$B$} ] ]
 \Tree [.{$\neg (A \supset B )$} [.{$A$} [.{$\neg B$} ] ] ]
 \Tree [.{$A \vee B$} [.{$A$} ] [.{$B$} ] ]
@@ -15,6 +16,7 @@
 \Tree [.{$A \equiv B$} [.{$A$} [.{$B$} ] ] [.{$\neg A$} [.{$\neg B$} ] ] ]
 \Tree [.{$\neg(A \equiv B)$} [.{$A$} [.{$\neg B$} ] ] [.{$\neg A$} [.{$B$} ] ] ]
 \section{Semantic tableaux for FDE}
+Initial list for $A_1, ... A_n \models B$ is with all $A_n, +$ and $B, -$. Closure condition: $A, +$ and $A, -$ for some formula $A$ occur on a branch. \\
 \Tree [.{$A \wedge B, + $} [.{$A, +$} [.{$B, +$} ] ] ]
 \Tree [.{$A \wedge B, -$} [.{$A, -$} ] [.{$B, -$} ] ]
 \Tree [.{$A \vee B, +$} [.{$A, +$} ] [.{$B, +$} ] ]
@@ -25,4 +27,21 @@
 \Tree [.{$\neg (A \vee B), -$} [.{$\neg A \wedge \neg B, -$} ] ]
 \Tree [.{$\neg \neg A, +$} [.{$A, +$} ] ]
 \Tree [.{$\neg \neg A, -$} [.{$A, -$} ] ]
+\section{Semantic tableaux for $K_3, LP, L_3, RM_3$}
+\subsection{$K_3$}
+Same as for FDE with extra closure condition: A branch also closes if it contains $A, +$ and $\neg A, +$ for some formula $A$.
+\subsection{$LP$}
+Same as for FDE with extra closure condition: A branch also closes if it contains $A, -$ and $\neg A, -$ for some formula $A$.
+\subsection{$L_3$}
+Like $K_3$ but with the following rules for $\supset$:\\
+\Tree [.{$A \supset B, +$} [.{$\neg A, +$} ] [.{$B, +$} ] [.{$A \vee \neg A, -$} [.{$B \vee \neg B, -$} ] ] ]
+\Tree [.{$A \supset B, -$} [.{$A, +$} [.{$B, -$} ] ] [.{$\neg B, +$} [.{$\neg A, -$} ] ] ]
+\Tree [.{$\neg(A \supset B), +$} [.{$A, +$} [.{$\neg B, +$} ] ] ]
+\Tree [.{$\neg(A \supset B), -$} [.{$A, -$} ] [.{$\neg B,-$} ] ]
+\subsection{$RM_3$}
+Like $LP$ but with the following rules for $\supset$:\\
+\Tree [.{$A \supset B, +$} [.{$A, -$} ] [.{$\neg B, -$} ] [.{$A \wedge \neg A, +$} [.{$B \wedge \neg B, +$} ] ] ]
+\Tree [.{$A \supset B, -$} [.{$A, +$} [.{$B, -$} ] ] [.{$\neg B, +$} [.{$\neg A, -$} ] ] ]
+\Tree [.{$\neg(A \supset B), +$} [.{$A, +$} [.{$\neg B, +$} ] ] ]
+\Tree [.{$\neg(A \supset B), -$} [.{$A, -$} ] [.{$\neg B,-$} ] ]
 \end{document}
