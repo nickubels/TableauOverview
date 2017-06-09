@@ -14,4 +14,15 @@
 \Tree [.{$\neg(A \wedge B)$} [.{$\neg A$} ] [.{$\neg B$} ] ]
 \Tree [.{$A \equiv B$} [.{$A$} [.{$B$} ] ] [.{$\neg A$} [.{$\neg B$} ] ] ]
 \Tree [.{$\neg(A \equiv B)$} [.{$A$} [.{$\neg B$} ] ] [.{$\neg A$} [.{$B$} ] ] ]
+\section{Semantic tableaux for FDE}
+\Tree [.{$A \wedge B, + $} [.{$A, +$} [.{$B, +$} ] ] ]
+\Tree [.{$A \wedge B, -$} [.{$A, -$} ] [.{$B, -$} ] ]
+\Tree [.{$A \vee B, +$} [.{$A, +$} ] [.{$B, +$} ] ]
+\Tree [.{$A \vee B, -$} [.{$A, -$} [.{$B, -$} ] ] ]
+\Tree [.{$\neg (A \wedge B), +$} [.{$\neg A \vee \neg B, +$} ] ]
+\Tree [.{$\neg (A \wedge B), -$} [.{$\neg A \vee \neg B, -$} ] ]
+\Tree [.{$\neg (A \vee B), +$} [.{$\neg A \wedge \neg B, +$} ] ]
+\Tree [.{$\neg (A \vee B), -$} [.{$\neg A \wedge \neg B, -$} ] ]
+\Tree [.{$\neg \neg A, +$} [.{$A, +$} ] ]
+\Tree [.{$\neg \neg A, -$} [.{$A, -$} ] ]
 \end{document}
