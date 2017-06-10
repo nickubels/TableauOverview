@@ -44,4 +44,21 @@ Like $LP$ but with the following rules for $\supset$:\\
 \Tree [.{$A \supset B, -$} [.{$A, +$} [.{$B, -$} ] ] [.{$\neg B, +$} [.{$\neg A, -$} ] ] ]
 \Tree [.{$\neg(A \supset B), +$} [.{$A, +$} [.{$\neg B, +$} ] ] ]
 \Tree [.{$\neg(A \supset B), -$} [.{$A, -$} ] [.{$\neg B,-$} ] ]
+\section{Tableaux for modal logic}
+Initial list for $A_1, ... A_n \models B$ is with all $A_n, 0$ and $\neg B, 0$. Closure condition: $A, i$ and $\neg A, i$ for some formula $A$ occur on a branch with the same number $i$. \\
+\Tree [.{$A \supset B, i$} [.{$\neg A, i$} ] [.{$B, i$} ] ]
+\Tree [.{$\neg (A \supset B ), i$} [.{$A, i$} [.{$\neg B, i$} ] ] ]
+\Tree [.{$A \vee B, i$} [.{$A, i$} ] [.{$B, i$} ] ]
+\Tree [.{$\neg (A \vee B ), i$} [.{$\neg A, i$} [.{$\neg B, i$} ] ] ]
+\Tree [.{$\neg \neg A, i$} [.{$A, i$} ] ]
+\Tree [.{$A \wedge B, i$} [.{$A, i$} [.{$B, i$} ] ] ]
+\Tree [.{$\neg(A \wedge B), i$} [.{$\neg A, i$} ] [.{$\neg B, i$} ] ]
+\Tree [.{$A \equiv B, i$} [.{$A, i$} [.{$B, i$} ] ] [.{$\neg A, i$} [.{$\neg B, i$} ] ] ]
+\Tree [.{$\neg(A \equiv B), i$} [.{$A, i$} [.{$\neg B, i$} ] ] [.{$\neg A, i$} [.{$B, i$} ] ] ]
+\Tree [.{$\neg \Box A, i$} [.{$\Diamond \neg A,i$} ] ]
+\Tree [.{$\neg \Diamond A,i$} [.{$\Box \neg A,i$} ] ]
+\Tree [.{$\Box A, i$ \\ $irj$} [.{$A,j$} ] ]
+\Tree [.{$\Diamond A, i$} [.{$irj$ \\ $A,j$} ] ]
+\Tree [.{$\neg \Box A,i$} [.{$irj$ \\ $\neg A, j$} ] ]
+\Tree [.{$\neg \Diamond A, i$ \\ $irj$} [.{$\neg A, j$} ] ]
 \end{document}
