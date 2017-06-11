@@ -92,4 +92,9 @@ Backward convergent ($\beta$): \\
 \Tree [.{$\neg [P]A,i$} [.{$\langle P \rangle \neg A,i$} ] ]
 \Tree [.{$\neg \langle P \rangle A,i$} [.{$[P] \neg A,i$} ] ]
 \section{First-order modal logic}
+\subsection{$CK$}
+\Tree [.{$\neg \exists xA,i$} [.{$\forall x \neg A,i$} ] ]
+\Tree [.{$\neg \forall xA,i$} [.{$\exists x \neg A,i$} ] ]
+\Tree [.{$\forall xA,i$} [.{$A_x(a),i$ \\ where $a$ is old (if possible);\\ otherwise introduce an $a$} ] ]
+\Tree [.{$\exists xA,i$} [.{$A_x(c),i$ \\ where $c$ is new} ] ]
 \end{document}
