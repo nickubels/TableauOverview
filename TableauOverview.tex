@@ -1,5 +1,5 @@
 \documentclass[a4paper]{article}
-\usepackage[margin=1.5in]{geometry}
+\usepackage[margin=1in]{geometry}
 \usepackage{graphicx}
 \usepackage{ amssymb }
 \usepackage{qtree}
@@ -20,7 +20,7 @@ Initial list for $A_1, ... A_n \models B$ is with all $A_n, +$ and $B, -$. Closu
 \Tree [.{$A \wedge B, + $} [.{$A, +$} [.{$B, +$} ] ] ]
 \Tree [.{$A \wedge B, -$} [.{$A, -$} ] [.{$B, -$} ] ]
 \Tree [.{$A \vee B, +$} [.{$A, +$} ] [.{$B, +$} ] ]
-\Tree [.{$A \vee B, -$} [.{$A, -$} [.{$B, -$} ] ] ]
+\Tree [.{$A \vee B, -$} [.{$A, -$} [.{$B, -$} ] ] ]\\
 \Tree [.{$\neg (A \wedge B), +$} [.{$\neg A \vee \neg B, +$} ] ]
 \Tree [.{$\neg (A \wedge B), -$} [.{$\neg A \vee \neg B, -$} ] ]
 \Tree [.{$\neg (A \vee B), +$} [.{$\neg A \wedge \neg B, +$} ] ]
@@ -44,6 +44,7 @@ Like $LP$ but with the following rules for $\supset$:\\
 \Tree [.{$A \supset B, -$} [.{$A, +$} [.{$B, -$} ] ] [.{$\neg B, +$} [.{$\neg A, -$} ] ] ]
 \Tree [.{$\neg(A \supset B), +$} [.{$A, +$} [.{$\neg B, +$} ] ] ]
 \Tree [.{$\neg(A \supset B), -$} [.{$A, -$} ] [.{$\neg B,-$} ] ]
+\pagebreak
 \section{Tableaux for modal logic}
 Initial list for $A_1, ... A_n \models B$ is with all $A_n, 0$ and $\neg B, 0$. Closure condition: $A, i$ and $\neg A, i$ for some formula $A$ occur on a branch with the same number $i$. \\
 \Tree [.{$A \supset B, i$} [.{$\neg A, i$} ] [.{$B, i$} ] ]
@@ -53,7 +54,7 @@ Initial list for $A_1, ... A_n \models B$ is with all $A_n, 0$ and $\neg B, 0$. 
 \Tree [.{$\neg \neg A, i$} [.{$A, i$} ] ]
 \Tree [.{$A \wedge B, i$} [.{$A, i$} [.{$B, i$} ] ] ]
 \Tree [.{$\neg(A \wedge B), i$} [.{$\neg A, i$} ] [.{$\neg B, i$} ] ]
-\Tree [.{$A \equiv B, i$} [.{$A, i$} [.{$B, i$} ] ] [.{$\neg A, i$} [.{$\neg B, i$} ] ] ]
+\Tree [.{$A \equiv B, i$} [.{$A, i$} [.{$B, i$} ] ] [.{$\neg A, i$} [.{$\neg B, i$} ] ] ]\\
 \Tree [.{$\neg(A \equiv B), i$} [.{$A, i$} [.{$\neg B, i$} ] ] [.{$\neg A, i$} [.{$B, i$} ] ] ]
 \Tree [.{$\neg \Box A, i$} [.{$\Diamond \neg A,i$} ] ]
 \Tree [.{$\neg \Diamond A,i$} [.{$\Box \neg A,i$} ] ]
@@ -62,26 +63,45 @@ Initial list for $A_1, ... A_n \models B$ is with all $A_n, 0$ and $\neg B, 0$. 
 \Tree [.{$\neg \Box A,i$} [.{$irj$ \\ $\neg A, j$} ] ]
 \Tree [.{$\neg \Diamond A, i$ \\ $irj$} [.{$\neg A, j$} ] ]
 \subsection{Restrictions}
-Reflexive ($\rho$):\\
+\begin{minipage}[t]{.33\textwidth}
+  Reflexive ($\rho$):\\
 \Tree [.{$ $} [.{$iri$} ] ]\\
+\end{minipage}%
+\begin{minipage}[t]{.33\textwidth}
 Symmetric ($\sigma$):\\
 \Tree [.{$irj$} [.{$jri$} ] ]\\
-Transitive ($\tau$):\\
-\Tree [.{$irj$ \\ $jrk$} [.{$irk$} ] ]\\
+\end{minipage}%
+\begin{minipage}[t]{.33\textwidth}
 Extendable ($\eta$):\\
 \Tree [.{$ $} [.{$irj$} ] ]\\
+\end{minipage}\\
+\begin{minipage}[t]{.33\textwidth}
+Transitive ($\tau$):\\
+\Tree [.{$irj$ \\ $jrk$} [.{$irk$} ] ]\\
+\end{minipage}%
+\begin{minipage}[t]{.33\textwidth}
 Universal ($\upsilon$):\\
 \Tree [.{$\Diamond A,i$} [.{$A,j$} ] ]
 \Tree [.{$\Box A,i$} [.{$A,j$} ] ]\\
+\end{minipage}%
+\begin{minipage}[t]{.33\textwidth}
 Dense ($\delta$):\\
 \Tree [.{$irj$} [.{$irk$ \\ $krj$} ] ]\\
+\end{minipage}\\
+\begin{minipage}[t]{.33\textwidth}
 Extra rules for $=$:\\
 \Tree [.{$\alpha(i)$ \\ $i = j$} [.{$\alpha(j)$} ] ]
 \Tree [.{$\alpha(i)$ \\ $j = i$} [.{$\alpha(j)$} ] ]\\
+\end{minipage}%
+\begin{minipage}[t]{.33\textwidth}
 Forward convergent ($\varphi$): \\
 \Tree [.{$irj$ \\ $irk$} [.{$jrk$} ] [.{$j = k$} ] [.{$krj$} ] ]\\
+\end{minipage}%
+\begin{minipage}[t]{.33\textwidth}
 Backward convergent ($\beta$): \\
 \Tree [.{$jri$ \\ $kri$} [.{$jrk$} ] [.{$j = k$} ] [.{$krj$} ] ]
+\end{minipage}
+
 \subsection{Tense logic}
 \Tree [.{$[F]A,i$\\$irj$} [.{$A,j$} ] ]
 \Tree [.{$\langle F \rangle A,i$} [.{$irj$ \\ $A,j$} ] ]
