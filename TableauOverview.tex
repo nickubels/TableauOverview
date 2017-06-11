@@ -61,4 +61,35 @@ Initial list for $A_1, ... A_n \models B$ is with all $A_n, 0$ and $\neg B, 0$. 
 \Tree [.{$\Diamond A, i$} [.{$irj$ \\ $A,j$} ] ]
 \Tree [.{$\neg \Box A,i$} [.{$irj$ \\ $\neg A, j$} ] ]
 \Tree [.{$\neg \Diamond A, i$ \\ $irj$} [.{$\neg A, j$} ] ]
+\subsection{Restrictions}
+Reflexive ($\rho$):\\
+\Tree [.{$ $} [.{$iri$} ] ]\\
+Symmetric ($\sigma$):\\
+\Tree [.{$irj$} [.{$jri$} ] ]\\
+Transitive ($\tau$):\\
+\Tree [.{$irj$ \\ $jrk$} [.{$irk$} ] ]\\
+Extendable ($\eta$):\\
+\Tree [.{$ $} [.{$irj$} ] ]\\
+Universal ($\upsilon$):\\
+\Tree [.{$\Diamond A,i$} [.{$A,j$} ] ]
+\Tree [.{$\Box A,i$} [.{$A,j$} ] ]\\
+Dense ($\delta$):\\
+\Tree [.{$irj$} [.{$irk$ \\ $krj$} ] ]\\
+Extra rules for $=$:\\
+\Tree [.{$\alpha(i)$ \\ $i = j$} [.{$\alpha(j)$} ] ]
+\Tree [.{$\alpha(i)$ \\ $j = i$} [.{$\alpha(j)$} ] ]\\
+Forward convergent ($\varphi$): \\
+\Tree [.{$irj$ \\ $irk$} [.{$jrk$} ] [.{$j = k$} ] [.{$krj$} ] ]\\
+Backward convergent ($\beta$): \\
+\Tree [.{$jri$ \\ $kri$} [.{$jrk$} ] [.{$j = k$} ] [.{$krj$} ] ]
+\subsection{Tense logic}
+\Tree [.{$[F]A,i$\\$irj$} [.{$A,j$} ] ]
+\Tree [.{$\langle F \rangle A,i$} [.{$irj$ \\ $A,j$} ] ]
+\Tree [.{$\neg [F]A,i$} [.{$\langle F \rangle \neg A,i$} ] ]
+\Tree [.{$\neg \langle F \rangle A,i$} [.{$[F] \neg A,i$} ] ]
+\Tree [.{$[P]A,i$\\$jri$} [.{$A,j$} ] ]
+\Tree [.{$\langle P \rangle A,i$} [.{$jri$ \\ $A,j$} ] ]
+\Tree [.{$\neg [P]A,i$} [.{$\langle P \rangle \neg A,i$} ] ]
+\Tree [.{$\neg \langle P \rangle A,i$} [.{$[P] \neg A,i$} ] ]
+\section{First-order modal logic}
 \end{document}
