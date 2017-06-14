@@ -3,6 +3,7 @@
 \usepackage{graphicx}
 \usepackage{ amssymb }
 \usepackage{qtree}
+\usepackage{hyperref}
 \begin{document}
 \section{Tableaux for classical propositional logic}
 Initial list for $A_1, ... A_n \models B$ is with $\neg B$. Closure condition: $A$ and $\neg A$ for some formula $A$ occur on a branch. \\
@@ -54,29 +55,29 @@ Initial list for $A_1, ... A_n \models B$ is with all $A_n, 0$ and $\neg B, 0$. 
 \Tree [.{$\neg \neg A, i$} [.{$A, i$} ] ]
 \Tree [.{$A \wedge B, i$} [.{$A, i$} [.{$B, i$} ] ] ]
 \Tree [.{$\neg(A \wedge B), i$} [.{$\neg A, i$} ] [.{$\neg B, i$} ] ]
-\Tree [.{$A \equiv B, i$} [.{$A, i$} [.{$B, i$} ] ] [.{$\neg A, i$} [.{$\neg B, i$} ] ] ]\\\\\\
+\Tree [.{$A \equiv B, i$} [.{$A, i$} [.{$B, i$} ] ] [.{$\neg A, i$} [.{$\neg B, i$} ] ] ]\\\\
 \Tree [.{$\neg(A \equiv B), i$} [.{$A, i$} [.{$\neg B, i$} ] ] [.{$\neg A, i$} [.{$B, i$} ] ] ]
 \Tree [.{$\neg \Box A, i$} [.{$\Diamond \neg A,i$} ] ]
 \Tree [.{$\neg \Diamond A,i$} [.{$\Box \neg A,i$} ] ]
-\Tree [.{$\Box A, i$ \\ $irj$} [.{$A,j$} ] ]
-\Tree [.{$\Diamond A, i$} [.{$irj$ \\ $A,j$} ] ]
-\Tree [.{$\neg \Box A,i$} [.{$irj$ \\ $\neg A, j$} ] ]
-\Tree [.{$\neg \Diamond A, i$ \\ $irj$} [.{$\neg A, j$} ] ]
+\Tree [.{$\Box A, i$ \\ $irj$} [.{$A,j$ \\ (old $j$)} ] ]
+\Tree [.{$\Diamond A, i$} [.{$irj$ \\ $A,j$\\ (new $j$)} ] ]
+\Tree [.{$\neg \Box A,i$} [.{$irj$ \\ $\neg A, j$\\ (new $j$)} ] ]
+\Tree [.{$\neg \Diamond A, i$ \\ $irj$} [.{$\neg A, j$\\ (old $j$)} ] ]
 \subsection{Restrictions}
 \begin{minipage}[t]{.33\textwidth}
   Reflexive ($\rho$):\\
 \Tree [.{$ $} [.{$iri$} ] ]\\
 \end{minipage}%
 \begin{minipage}[t]{.33\textwidth}
-Symmetric ($\sigma$):\\
+Symmetric ($\sigma$)(old $j$):\\
 \Tree [.{$irj$} [.{$jri$} ] ]\\
 \end{minipage}%
 \begin{minipage}[t]{.33\textwidth}
-Extendable ($\eta$):\\
+Extendable ($\eta$)(new $j$):\\
 \Tree [.{$ $} [.{$irj$} ] ]\\
 \end{minipage}\\\\
 \begin{minipage}[t]{.33\textwidth}
-Transitive ($\tau$):\\
+Transitive ($\tau$)(old $j$ and $k$):\\
 \Tree [.{$irj$ \\ $jrk$} [.{$irk$} ] ]\\
 \end{minipage}%
 \begin{minipage}[t]{.33\textwidth}
@@ -85,7 +86,7 @@ Universal ($\upsilon$):\\
 \Tree [.{$\Box A,i$} [.{$A,j$} ] ]\\
 \end{minipage}%
 \begin{minipage}[t]{.33\textwidth}
-Dense ($\delta$):\\
+Dense ($\delta$)(old $j$):\\
 \Tree [.{$irj$} [.{$irk$ \\ $krj$} ] ]\\
 \end{minipage}\\\\
 \begin{minipage}[t]{.33\textwidth}
@@ -95,20 +96,22 @@ Extra rules for $=$:\\
 \end{minipage}%
 \begin{minipage}[t]{.33\textwidth}
 Forward convergent ($\varphi$): \\
+(old $j$ and $k$)
 \Tree [.{$irj$ \\ $irk$} [.{$jrk$} ] [.{$j = k$} ] [.{$krj$} ] ]\\
 \end{minipage}%
 \begin{minipage}[t]{.33\textwidth}
 Backward convergent ($\beta$): \\
+(old $j$ and $k$)
 \Tree [.{$jri$ \\ $kri$} [.{$jrk$} ] [.{$j = k$} ] [.{$krj$} ] ]
 \end{minipage}
 
 \subsection{Tense logic}
-\Tree [.{$[F]A,i$\\$irj$} [.{$A,j$} ] ]
-\Tree [.{$\langle F \rangle A,i$} [.{$irj$ \\ $A,j$} ] ]
+\Tree [.{$[F]A,i$\\$irj$} [.{$A,j$\\(old $j$)} ] ]
+\Tree [.{$\langle F \rangle A,i$} [.{$irj$ \\ $A,j$\\(new $j$)} ] ]
 \Tree [.{$\neg [F]A,i$} [.{$\langle F \rangle \neg A,i$} ] ]
 \Tree [.{$\neg \langle F \rangle A,i$} [.{$[F] \neg A,i$} ] ]
-\Tree [.{$[P]A,i$\\$jri$} [.{$A,j$} ] ]
-\Tree [.{$\langle P \rangle A,i$} [.{$jri$ \\ $A,j$} ] ]
+\Tree [.{$[P]A,i$\\$jri$} [.{$A,j$\\(old $j$)} ] ]
+\Tree [.{$\langle P \rangle A,i$} [.{$jri$ \\ $A,j$\\(new $j$)} ] ]
 \Tree [.{$\neg [P]A,i$} [.{$\langle P \rangle \neg A,i$} ] ]
 \Tree [.{$\neg \langle P \rangle A,i$} [.{$[P] \neg A,i$} ] ]
 \section{First-order modal logic}
@@ -121,5 +124,5 @@ Backward convergent ($\beta$): \\
 \Tree [.{$\forall xA,i$} [.{$\neg \mathfrak{E} a,i$} ] [.{$A_x(a),i$} ] ]
 \Tree [.{$\exists xA,i$} [.{$\mathfrak{E}c,i$} [.{$A_x(c),i$} ] ] ]\\
 $a$ is old, if possible; otherwise introduce a new $a$,
-$c$ is a new variable
+$c$ is a new variable\footnote{Made by Nick Ubels, \url{https://github.com/nickubels/TableauOverview}}
 \end{document}
