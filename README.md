@@ -4,3 +4,6 @@ Overview of the Logic tableau rules used in the University of Groningen course _
 
 ## Download
 [Download the .pdf here](https://github.com/nickubels/TableauOverview/blob/master/TableauOverview.pdf)
+
+## Disclaimer
+The correctness of this overview sheet is not guaranteed. As of the CC0 licence I am not liable for any errors in this overview sheet. However: A pull request is appreciated if you spot a mistake!
